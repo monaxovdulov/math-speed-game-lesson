@@ -1,0 +1,20 @@
+services:
+  app:
+    build: .
+    container_name: math-speed-game-lesson
+    restart: unless-stopped
+    user: "1000:1000"
+    environment:
+      HOST: 0.0.0.0
+      PORT: "8000"
+      DATA_DIR: /app/data
+      GAME_SECONDS: "60"
+    volumes:
+      - ./data:/app/data
+    networks:
+      - caddy_net
+
+networks:
+  caddy_net:
+    external: true
+    name: granit-staging_default

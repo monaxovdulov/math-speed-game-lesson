@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Математический забег</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main class="app">
+    <section class="panel start-panel" id="start-screen">
+      <div class="brand">
+        <div class="mark">123</div>
+        <div>
+          <h1>Математический забег</h1>
+          <p>Решай примеры быстрее таймера и попадай в общий счет.</p>
+        </div>
+      </div>
+
+      <form id="start-form" class="start-form">
+        <label for="player-name">Имя игрока</label>
+        <div class="input-row">
+          <input id="player-name" name="player-name" type="text" maxlength="30" autocomplete="off" required>
+          <button type="submit">Старт</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="panel game-panel hidden" id="game-screen">
+      <header class="game-header">
+        <div>
+          <span class="label">Игрок</span>
+          <strong id="current-player"></strong>
+        </div>
+        <div>
+          <span class="label">Время</span>
+          <strong id="timer">60</strong>
+        </div>
+        <div>
+          <span class="label">Очки</span>
+          <strong id="score">0</strong>
+        </div>
+      </header>
+
+      <div class="problem-card">
+        <div class="problem-label">Пример</div>
+        <div class="problem" id="problem-text">0 + 0</div>
+      </div>
+
+      <form id="answer-form" class="answer-form">
+        <input id="answer-input" type="number" inputmode="numeric" autocomplete="off" required>
+        <button type="submit">Ответить</button>
+      </form>
+
+      <div class="message" id="message"></div>
+    </section>
+
+    <section class="panel score-panel">
+      <div class="score-title">
+        <h2>Общий счет</h2>
+        <button id="refresh-score" type="button">Обновить</button>
+      </div>
+      <ol id="leaderboard" class="leaderboard"></ol>
+    </section>
+  </main>
+
+  <script src="/game.js"></script>
+</body>
+</html>

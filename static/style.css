@@ -1,0 +1,251 @@
+:root {
+  color-scheme: light;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f7fb;
+  color: #172033;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    linear-gradient(135deg, rgba(25, 118, 210, 0.12), transparent 34%),
+    linear-gradient(315deg, rgba(46, 125, 50, 0.12), transparent 32%),
+    #f4f7fb;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  border: 0;
+  border-radius: 8px;
+  background: #1976d2;
+  color: #ffffff;
+  cursor: pointer;
+  font-weight: 700;
+  min-height: 44px;
+  padding: 0 18px;
+}
+
+button:hover {
+  background: #145da6;
+}
+
+input {
+  width: 100%;
+  border: 1px solid #c8d2e4;
+  border-radius: 8px;
+  min-height: 44px;
+  padding: 0 12px;
+  background: #ffffff;
+}
+
+.app {
+  width: min(980px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 32px 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(260px, 0.7fr);
+  gap: 18px;
+}
+
+.panel {
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid #dce4f0;
+  border-radius: 8px;
+  box-shadow: 0 16px 38px rgba(33, 48, 77, 0.08);
+}
+
+.start-panel,
+.game-panel {
+  padding: 24px;
+}
+
+.brand {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.mark {
+  width: 72px;
+  height: 72px;
+  border-radius: 8px;
+  background: #2e7d32;
+  color: #ffffff;
+  display: grid;
+  place-items: center;
+  font-size: 24px;
+  font-weight: 800;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+h1 {
+  font-size: 34px;
+  line-height: 1.08;
+}
+
+p {
+  margin-top: 8px;
+  color: #5a667a;
+}
+
+.start-form {
+  margin-top: 28px;
+}
+
+label,
+.label,
+.problem-label {
+  display: block;
+  color: #5a667a;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.input-row,
+.answer-form {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.game-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.game-header div {
+  border: 1px solid #dce4f0;
+  border-radius: 8px;
+  padding: 12px;
+  min-width: 0;
+}
+
+.game-header strong {
+  display: block;
+  margin-top: 4px;
+  font-size: 24px;
+  overflow-wrap: anywhere;
+}
+
+.problem-card {
+  border: 1px solid #c8d2e4;
+  border-radius: 8px;
+  background: #f9fbff;
+  padding: 20px;
+}
+
+.problem {
+  margin-top: 10px;
+  font-size: 56px;
+  line-height: 1;
+  font-weight: 800;
+}
+
+.answer-form {
+  margin-top: 14px;
+}
+
+.answer-form input {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.message {
+  min-height: 24px;
+  margin-top: 14px;
+  color: #5a667a;
+  font-weight: 700;
+}
+
+.score-panel {
+  padding: 18px;
+}
+
+.score-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.score-title h2 {
+  font-size: 22px;
+}
+
+.score-title button {
+  min-height: 36px;
+  padding: 0 12px;
+  background: #172033;
+}
+
+.leaderboard {
+  margin: 16px 0 0;
+  padding-left: 22px;
+}
+
+.leaderboard li {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 8px;
+  background: #f4f7fb;
+  font-weight: 700;
+}
+
+.leaderboard span {
+  color: #5a667a;
+  font-weight: 400;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 760px) {
+  .app {
+    grid-template-columns: 1fr;
+    width: min(100% - 20px, 620px);
+    padding: 18px 0;
+  }
+
+  .brand {
+    align-items: flex-start;
+  }
+
+  .mark {
+    width: 56px;
+    height: 56px;
+    font-size: 18px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  .game-header,
+  .input-row,
+  .answer-form {
+    grid-template-columns: 1fr;
+  }
+
+  .problem {
+    font-size: 46px;
+  }
+}

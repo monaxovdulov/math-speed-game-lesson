@@ -1,0 +1,9 @@
+xn----8sbc0azdcec5af8hg.xn--p1ai {
+	encode zstd gzip
+
+	header {
+		-Server
+	}
+
+	reverse_proxy math-speed-game-lesson:8000
+}
