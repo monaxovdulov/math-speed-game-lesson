@@ -149,8 +149,13 @@ data/scores.txt
 База данных здесь не используется. Сервер сам читает и пишет обычный текстовый файл:
 
 ```python
-text = SCORES_FILE.read_text(encoding="utf-8")
-SCORES_FILE.write_text(..., encoding="utf-8")
+file = open(SCORES_FILE, "r", encoding="utf-8")
+text = file.read()
+file.close()
+
+file = open(SCORES_FILE, "w", encoding="utf-8")
+file.write(text)
+file.close()
 ```
 
 Для первого веб-приложения это полезно: ученик видит, что сервер может сохранять данные без магии.
