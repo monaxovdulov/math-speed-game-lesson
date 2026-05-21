@@ -17,7 +17,7 @@
 https://питоны-батоны.рф/
 ```
 
-Браузер просит у сервера страницу. В `server.py` это попадает в функцию `application`.
+Браузер просит у сервера страницу. FastAPI смотрит на список маршрутов внизу `server.py`.
 
 Сервер видит:
 
@@ -26,11 +26,10 @@ method = GET
 path = /
 ```
 
-И выполняет эту ветку:
+И по этому маршруту вызывает функцию `page_index`:
 
 ```python
-if method == "GET" and path == "/":
-    return send_file(start_response, STATIC_DIR / "index.html", "text/html; charset=utf-8")
+app.add_api_route("/", page_index, methods=["GET", "HEAD"])
 ```
 
 Так браузер получает HTML-страницу. Потом браузер отдельно запрашивает `/style.css` и `/game.js`.
@@ -162,21 +161,19 @@ file.close()
 
 ## Где находится роутинг
 
-Роутинг находится в функции `application` в `server.py`.
+Роутинг находится внизу `server.py`.
 
 Пример:
 
 ```python
-elif method == "POST" and path == "/api/answer":
-    data = read_json(environ)
-    ...
+app.add_api_route("/api/answer", api_answer, methods=["POST"])
 ```
 
 Это читается так:
 
 ```text
 если пришел POST-запрос на /api/answer,
-то прочитай JSON и проверь ответ игрока
+то вызови функцию api_answer
 ```
 
 ## Что такое JSON в этом проекте
