@@ -164,6 +164,8 @@ file.close()
 
 Роутинг находится в функции `application` в `server.py`.
 
+Если непонятны слова `wsgiref`, `environ`, `start_response`, заголовки или байты, сначала стоит прочитать `docs/http-wsgi-basics.md`.
+
 Пример:
 
 ```python
