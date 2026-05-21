@@ -26,7 +26,7 @@ http://127.0.0.1:8000/
 - `data/scores.txt` - текстовый файл со счетом игроков. Создается автоматически.
 - `docs/scheme.md` - схема ролей: пользователь, браузер, домен, IP, веб-сервер, Python, файл.
 - `docs/http-data-exchange.md` - вводное объяснение HTTP и обмена данными со схемами и практическими примерами.
-- `docs/js-client-server-examples.md` - реальные примеры из проекта: как JavaScript отправляет запросы, а `server.py` их обрабатывает.
+- `docs/js-client-server-examples.md` - реальные примеры из проекта: функции с нуля, `fetch` в JavaScript и обработка запросов в `server.py`.
 - `docs/http-wsgi-basics.md` - объяснение с нуля: HTTP-запрос, ответ, WSGI, `environ`, `start_response`, байты и заголовки.
 - `docs/how-it-works.md` - подробное объяснение работы приложения.
 - `docs/lesson-plan.md` - порядок объяснения проекта на уроке.

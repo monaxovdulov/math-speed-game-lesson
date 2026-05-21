@@ -19,7 +19,7 @@
 3. Открыть `docs/http-wsgi-basics.md` и объяснить, как общий HTTP-обмен попадает в низкоуровневый Python-код через `wsgiref`, `environ`, `start_response`, байты и заголовки.
 4. Открыть `static/index.html` и показать, что HTML - это заготовка экрана.
 5. Открыть `static/game.js` и показать только крупные действия: старт, ответ, таймер, обновление счета.
-6. Открыть `docs/js-client-server-examples.md` и разобрать пары: `fetch(...)` на клиенте и обработчик в `server.py`.
+6. Открыть `docs/js-client-server-examples.md`: сначала разобрать, что такое функция, вызов, `return`, `async/await`, затем пары `fetch(...)` на клиенте и обработчик в `server.py`.
 7. Открыть `server.py` и найти функцию `application`.
 8. Разобрать таблицу URL из `README.md`.
 9. Запустить игру локально командой `python3 server.py`.
